@@ -1,5 +1,6 @@
 ﻿Imports System.Runtime.InteropServices
 Imports System.Text
+Imports System.Net
 Public Class speechtotext_ru
     <DllImport("winmm.dll")>
     Private Shared Function mciSendString(ByVal command As String, ByVal buffer As StringBuilder, ByVal bufferSize As Integer, ByVal hwndCallback As IntPtr) As Integer
@@ -14,7 +15,7 @@ Public Class speechtotext_ru
             i = mciSendString("record capture", Nothing, 0, 0)
             Console.WriteLine(i)
 
-            Threading.Thread.Sleep(5000)
+            Threading.Thread.Sleep(2000)
         Catch ex As Exception
             Console.WriteLine(ex.Message)
         End Try
@@ -42,4 +43,17 @@ Public Class speechtotext_ru
         menu_ru.Show()
         Me.Hide()
     End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
 End Class

@@ -33,12 +33,12 @@ Partial Class speechtotext_ru
         'Timer1
         '
         Me.Timer1.Enabled = True
-        Me.Timer1.Interval = 5000
+        Me.Timer1.Interval = 2000
         '
         'Timer2
         '
         Me.Timer2.Enabled = True
-        Me.Timer2.Interval = 5000
+        Me.Timer2.Interval = 2000
         '
         'TextBox1
         '

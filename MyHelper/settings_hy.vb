@@ -462,6 +462,12 @@ Public Class settings_hy
     End Sub
 
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        Call start_test.FlushMemory()
+        Call start_test.setanjatel()
+        start_hy.Timer1.Start()
+        start_hy.Timer2.Start()
+        start_hy.Timer3.Start()
+        start_hy.Timer4.Start()
         Call check_first() : Call updatedata()
         Call getdata()
 

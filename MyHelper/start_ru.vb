@@ -1,20 +1,20 @@
 ﻿Imports System
 Imports System.Data
 Imports System.Data.OleDb
-
 Public Class start_ru
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         menu_ru.Show()
         Me.Hide()
     End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs)
-        settings_ru.Show()
-        Me.Hide()
-    End Sub
-
     Private Sub start_ru_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call start_test.FlushMemory()
+        start_load()
+        Timer1.Start()
+        Timer2.Start()
+        Timer3.Start()
+        Timer4.Start()
+    End Sub
+    Public Sub start_load()
         Dim o As String = ""
         Dim provider As String
         Dim dataFile As String
@@ -57,11 +57,8 @@ Public Class start_ru
             Label1.ForeColor = Color.Lime
             Button1.ForeColor = Color.Lime
         End If
-        Timer1.Start()
-        Timer2.Start()
-        Timer3.Start()
-        Timer4.Start()
     End Sub
+
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Call start_test.FlushMemory()
@@ -93,9 +90,7 @@ Public Class start_ru
             End If
             myConnection.Close()
         Catch ex As Exception
-
         End Try
-
     End Sub
 
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
@@ -127,11 +122,8 @@ Public Class start_ru
                 Timer2.Stop()
             End If
         Catch ex As Exception
-
         End Try
-
     End Sub
-
     Private Sub Timer3_Tick(sender As Object, e As EventArgs) Handles Timer3.Tick
         Call start_test.FlushMemory()
         Try
@@ -162,9 +154,7 @@ Public Class start_ru
                 Timer3.Stop()
             End If
         Catch ex As Exception
-
         End Try
-
     End Sub
 
     Private Sub Timer4_Tick(sender As Object, e As EventArgs) Handles Timer4.Tick
@@ -197,8 +187,6 @@ Public Class start_ru
                 Timer4.Stop()
             End If
         Catch ex As Exception
-
         End Try
-
     End Sub
 End Class

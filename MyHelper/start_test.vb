@@ -27,24 +27,11 @@ Public Class start_test
     Dim dr As OleDbDataReader
     Private Sub start_test_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call setanjatel()
-
-
-
-
-
-
-
-
-
-
-
         provider = "Provider=Microsoft.JET.OLEDB.4.0;Data Source ="
         dataFile = "data/data.mdb" ' Change it to your Access Database location
         connString = provider & dataFile
         myConnection.ConnectionString = connString
         myConnection.Open()
-
-
         Dim wherename = "first_time"
         Dim str = "SELECT * FROM settings WHERE (name = '" & wherename & " ')"
         Dim cmd = New OleDbCommand(str, myConnection)
@@ -76,13 +63,9 @@ Public Class start_test
                 start_uk.Show()
                 Me.Close()
             End If
-
         End If
-
-
     End Sub
     Public Sub setanjatel()
-
         Dim provider As String
         Dim dataFile As String
         Dim connString As String
@@ -100,25 +83,28 @@ Public Class start_test
         Dim cmd As OleDbCommand = New OleDbCommand(str, myConnection)
         dr = cmd.ExecuteReader
         While dr.Read()
-
             str = dr("value").ToString
         End While
-        TextBox1.Text = str
-        If (str <> "0" And str <> 0) Then
-            MsgBox(str)
+        If (str <> "0" And str <> 0 And str <> "") Then
+            Timer1.Enabled = True
             Timer1.Interval = Val(str) * 60000
             Timer1.Start()
         End If
         myConnection.Close()
         Call FlushMemory()
     End Sub
-
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-
         MsgBox("ANJATEL KOMP@")
         'System.Diagnostics.Process.Start("shutdown", "-l")
-
+        ''Timer1.Stop()
         Call FlushMemory()
-        Timer1.Stop()
     End Sub
+
+
+
+
+
+
+
+
 End Class
