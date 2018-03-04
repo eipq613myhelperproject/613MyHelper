@@ -2,8 +2,6 @@
 Imports System.Data
 Imports System.Data.OleDb
 Public Class lng_form
-
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim provider As String
         Dim dataFile As String
@@ -26,8 +24,7 @@ Public Class lng_form
         cmd.ExecuteNonQuery()
         settings_ru.Show()
         Me.Close()
-    End Sub
-
+    End Sub '' Ռուսերեն ընտրություն
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Dim provider As String
         Dim dataFile As String
@@ -50,8 +47,7 @@ Public Class lng_form
         cmd.ExecuteNonQuery()
         settings_uk.Show()
         Me.Close()
-    End Sub
-
+    End Sub '' ՈՒկրաիներեն ընտրություն
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim provider As String
         Dim dataFile As String
@@ -74,8 +70,7 @@ Public Class lng_form
         cmd.ExecuteNonQuery()
         settings_en.Show()
         Me.Close()
-    End Sub
-
+    End Sub  '' Անգլերեն ընտրություն
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Dim provider As String
         Dim dataFile As String
@@ -98,5 +93,5 @@ Public Class lng_form
         cmd.ExecuteNonQuery()
         settings_hy.Show()
         Me.Close()
-    End Sub
+    End Sub  '' Հայերեն ընտրություն
 End Class

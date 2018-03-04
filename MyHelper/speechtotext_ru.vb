@@ -22,7 +22,6 @@ Public Class speechtotext_ru
         Catch ex As Exception
             Console.WriteLine(ex.Message)
         End Try
-        Call start_test.FlushMemory()
     End Sub
 
 
@@ -126,7 +125,6 @@ Public Class speechtotext_ru
         Catch ex As Exception
             Console.WriteLine(ex.Message)
         End Try
-        Call start_test.FlushMemory()
     End Sub
     Public Function ConvertFileToBase64(ByVal fileName As String) As String
         Return Convert.ToBase64String(System.IO.File.ReadAllBytes(fileName))
@@ -163,9 +161,6 @@ Public Class speechtotext_ru
         response = CType(request.GetResponse(), HttpWebResponse)
         Return New StreamReader(response.GetResponseStream()).ReadToEnd()
     End Function
-
-
-
 
 
 End Class

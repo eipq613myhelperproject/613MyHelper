@@ -7,7 +7,7 @@ Public Class start_hy
         Me.Close()
     End Sub
     Private Sub start_hy_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        start_ru.start_load()
+        start_test.start_load()
         Timer1.Enabled = True
         Timer2.Enabled = True
         Timer3.Enabled = True
@@ -19,7 +19,6 @@ Public Class start_hy
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        Call start_test.FlushMemory()
         Try
             Dim o As String = ""
             Dim provider As String
@@ -52,7 +51,6 @@ Public Class start_hy
     End Sub
 
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
-        Call start_test.FlushMemory()
         Try
             Dim o As String = ""
             Dim provider As String
@@ -83,7 +81,6 @@ Public Class start_hy
         End Try
     End Sub
     Private Sub Timer3_Tick(sender As Object, e As EventArgs) Handles Timer3.Tick
-        Call start_test.FlushMemory()
         Try
             Dim o As String = ""
             Dim provider As String
@@ -116,7 +113,6 @@ Public Class start_hy
     End Sub
 
     Private Sub Timer4_Tick(sender As Object, e As EventArgs) Handles Timer4.Tick
-        Call start_test.FlushMemory()
         Try
             Dim o As String = ""
             Dim provider As String

@@ -192,30 +192,6 @@
     <Compile Include="alarm_ru.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="helper_en.Designer.vb">
-      <DependentUpon>helper_en.vb</DependentUpon>
-    </Compile>
-    <Compile Include="helper_en.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="helper_hy.Designer.vb">
-      <DependentUpon>helper_hy.vb</DependentUpon>
-    </Compile>
-    <Compile Include="helper_hy.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="helper_ru.Designer.vb">
-      <DependentUpon>helper_ru.vb</DependentUpon>
-    </Compile>
-    <Compile Include="helper_ru.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="helper_uk.Designer.vb">
-      <DependentUpon>helper_uk.vb</DependentUpon>
-    </Compile>
-    <Compile Include="helper_uk.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="lng_form.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -386,18 +362,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="alarm_ru.resx">
       <DependentUpon>alarm_ru.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="helper_en.resx">
-      <DependentUpon>helper_en.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="helper_hy.resx">
-      <DependentUpon>helper_hy.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="helper_ru.resx">
-      <DependentUpon>helper_ru.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="helper_uk.resx">
-      <DependentUpon>helper_uk.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="lng_form.resx">
       <DependentUpon>lng_form.vb</DependentUpon>

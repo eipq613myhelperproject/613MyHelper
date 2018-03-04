@@ -25,10 +25,16 @@ Partial Class start_test
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(start_test))
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'Timer1
         '
+        '
+        'Timer2
+        '
+        Me.Timer2.Enabled = True
+        Me.Timer2.Interval = 2000
         '
         'start_test
         '
@@ -43,4 +49,5 @@ Partial Class start_test
     End Sub
 
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents Timer2 As Timer
 End Class

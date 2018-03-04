@@ -49,6 +49,10 @@ Partial Class settings_ru
         Me.Button12 = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -69,7 +73,7 @@ Partial Class settings_ru
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.DarkCyan
-        Me.Label2.Location = New System.Drawing.Point(77, 84)
+        Me.Label2.Location = New System.Drawing.Point(78, 64)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(265, 25)
         Me.Label2.TabIndex = 3
@@ -80,7 +84,7 @@ Partial Class settings_ru
         Me.Button2.BackColor = System.Drawing.Color.White
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Button2.Location = New System.Drawing.Point(37, 179)
+        Me.Button2.Location = New System.Drawing.Point(38, 159)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(187, 35)
         Me.Button2.TabIndex = 4
@@ -93,7 +97,7 @@ Partial Class settings_ru
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.Blue
-        Me.Button3.Location = New System.Drawing.Point(37, 220)
+        Me.Button3.Location = New System.Drawing.Point(38, 200)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(187, 35)
         Me.Button3.TabIndex = 5
@@ -106,7 +110,7 @@ Partial Class settings_ru
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Button4.ForeColor = System.Drawing.Color.Sienna
-        Me.Button4.Location = New System.Drawing.Point(230, 118)
+        Me.Button4.Location = New System.Drawing.Point(231, 98)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(187, 62)
         Me.Button4.TabIndex = 6
@@ -119,7 +123,7 @@ Partial Class settings_ru
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Button5.ForeColor = System.Drawing.Color.Lime
-        Me.Button5.Location = New System.Drawing.Point(230, 197)
+        Me.Button5.Location = New System.Drawing.Point(231, 177)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(187, 58)
         Me.Button5.TabIndex = 7
@@ -132,7 +136,7 @@ Partial Class settings_ru
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Teal
-        Me.Button1.Location = New System.Drawing.Point(37, 118)
+        Me.Button1.Location = New System.Drawing.Point(38, 98)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(187, 55)
         Me.Button1.TabIndex = 2
@@ -145,7 +149,7 @@ Partial Class settings_ru
         Me.CheckBox1.BackColor = System.Drawing.Color.Transparent
         Me.CheckBox1.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.CheckBox1.ForeColor = System.Drawing.Color.Teal
-        Me.CheckBox1.Location = New System.Drawing.Point(37, 304)
+        Me.CheckBox1.Location = New System.Drawing.Point(38, 284)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(86, 30)
         Me.CheckBox1.TabIndex = 8
@@ -158,7 +162,7 @@ Partial Class settings_ru
         Me.CheckBox2.BackColor = System.Drawing.Color.Transparent
         Me.CheckBox2.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.CheckBox2.ForeColor = System.Drawing.Color.Teal
-        Me.CheckBox2.Location = New System.Drawing.Point(37, 339)
+        Me.CheckBox2.Location = New System.Drawing.Point(38, 319)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(159, 30)
         Me.CheckBox2.TabIndex = 9
@@ -171,7 +175,7 @@ Partial Class settings_ru
         Me.CheckBox3.BackColor = System.Drawing.Color.Transparent
         Me.CheckBox3.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.CheckBox3.ForeColor = System.Drawing.Color.Teal
-        Me.CheckBox3.Location = New System.Drawing.Point(37, 374)
+        Me.CheckBox3.Location = New System.Drawing.Point(38, 354)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.Size = New System.Drawing.Size(171, 30)
         Me.CheckBox3.TabIndex = 10
@@ -184,7 +188,7 @@ Partial Class settings_ru
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button6.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Button6.ForeColor = System.Drawing.Color.Teal
-        Me.Button6.Location = New System.Drawing.Point(585, 118)
+        Me.Button6.Location = New System.Drawing.Point(586, 98)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(154, 47)
         Me.Button6.TabIndex = 14
@@ -197,7 +201,7 @@ Partial Class settings_ru
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button7.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Button7.ForeColor = System.Drawing.Color.White
-        Me.Button7.Location = New System.Drawing.Point(585, 171)
+        Me.Button7.Location = New System.Drawing.Point(586, 151)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(154, 47)
         Me.Button7.TabIndex = 13
@@ -210,7 +214,7 @@ Partial Class settings_ru
         Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button8.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Button8.ForeColor = System.Drawing.Color.Teal
-        Me.Button8.Location = New System.Drawing.Point(447, 171)
+        Me.Button8.Location = New System.Drawing.Point(448, 151)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(127, 47)
         Me.Button8.TabIndex = 12
@@ -223,7 +227,7 @@ Partial Class settings_ru
         Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button9.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Button9.ForeColor = System.Drawing.Color.White
-        Me.Button9.Location = New System.Drawing.Point(447, 118)
+        Me.Button9.Location = New System.Drawing.Point(448, 98)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(127, 47)
         Me.Button9.TabIndex = 11
@@ -236,7 +240,7 @@ Partial Class settings_ru
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.DarkCyan
-        Me.Label3.Location = New System.Drawing.Point(468, 84)
+        Me.Label3.Location = New System.Drawing.Point(469, 64)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(232, 31)
         Me.Label3.TabIndex = 15
@@ -261,9 +265,9 @@ Partial Class settings_ru
         Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button11.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Button11.ForeColor = System.Drawing.Color.Teal
-        Me.Button11.Location = New System.Drawing.Point(307, 444)
+        Me.Button11.Location = New System.Drawing.Point(271, 517)
         Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(143, 56)
+        Me.Button11.Size = New System.Drawing.Size(147, 63)
         Me.Button11.TabIndex = 19
         Me.Button11.Text = "Сохранить"
         Me.Button11.UseVisualStyleBackColor = False
@@ -271,7 +275,7 @@ Partial Class settings_ru
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(462, 339)
+        Me.TextBox2.Location = New System.Drawing.Point(463, 319)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(72, 29)
@@ -280,7 +284,7 @@ Partial Class settings_ru
         'TextBox3
         '
         Me.TextBox3.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(545, 339)
+        Me.TextBox3.Location = New System.Drawing.Point(546, 319)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(72, 29)
@@ -289,7 +293,7 @@ Partial Class settings_ru
         'TextBox4
         '
         Me.TextBox4.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(462, 374)
+        Me.TextBox4.Location = New System.Drawing.Point(463, 354)
         Me.TextBox4.Multiline = True
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(72, 29)
@@ -298,7 +302,7 @@ Partial Class settings_ru
         'TextBox5
         '
         Me.TextBox5.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(545, 374)
+        Me.TextBox5.Location = New System.Drawing.Point(546, 354)
         Me.TextBox5.Multiline = True
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(72, 29)
@@ -310,7 +314,7 @@ Partial Class settings_ru
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.DarkCyan
-        Me.Label4.Location = New System.Drawing.Point(467, 304)
+        Me.Label4.Location = New System.Drawing.Point(468, 284)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(130, 26)
         Me.Label4.TabIndex = 23
@@ -322,7 +326,7 @@ Partial Class settings_ru
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.DarkCyan
-        Me.Label5.Location = New System.Drawing.Point(468, 406)
+        Me.Label5.Location = New System.Drawing.Point(469, 386)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(149, 24)
         Me.Label5.TabIndex = 24
@@ -347,7 +351,7 @@ Partial Class settings_ru
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.DarkCyan
-        Me.Label6.Location = New System.Drawing.Point(44, 411)
+        Me.Label6.Location = New System.Drawing.Point(45, 391)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(163, 26)
         Me.Label6.TabIndex = 26
@@ -358,17 +362,63 @@ Partial Class settings_ru
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"5", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60", "70", "80", "90", "100", "110", "120"})
-        Me.ComboBox1.Location = New System.Drawing.Point(213, 416)
+        Me.ComboBox1.Location = New System.Drawing.Point(214, 396)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(72, 24)
         Me.ComboBox1.TabIndex = 27
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.DarkCyan
+        Me.Label7.Location = New System.Drawing.Point(46, 429)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(90, 26)
+        Me.Label7.TabIndex = 28
+        Me.Label7.Text = "Сервер"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(136, 429)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(282, 29)
+        Me.TextBox1.TabIndex = 29
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.Teal
+        Me.Label9.Location = New System.Drawing.Point(12, 468)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(250, 20)
+        Me.Label9.TabIndex = 78
+        Me.Label9.Text = "Номер телефона с знаком +"
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.TextBox6.Location = New System.Drawing.Point(268, 462)
+        Me.TextBox6.Multiline = True
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(282, 29)
+        Me.TextBox6.TabIndex = 79
         '
         'settings_ru
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(754, 521)
+        Me.ClientSize = New System.Drawing.Size(754, 592)
+        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Button12)
@@ -429,4 +479,8 @@ Partial Class settings_ru
     Friend WithEvents Button12 As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents TextBox6 As TextBox
 End Class
