@@ -82,7 +82,7 @@ Public Class start_test
 
     End Sub
     Public Sub setanjatel()
-        Call FlushMemory()
+
         Dim provider As String
         Dim dataFile As String
         Dim connString As String
@@ -103,15 +103,14 @@ Public Class start_test
 
             str = dr("value").ToString
         End While
-        Timer1.Interval = Val(str) * 60000
-
-
-        Timer1.Start()
-
-
+        TextBox1.Text = str
+        If (str <> "0" And str <> 0) Then
+            MsgBox(str)
+            Timer1.Interval = Val(str) * 60000
+            Timer1.Start()
+        End If
         myConnection.Close()
-
-
+        Call FlushMemory()
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -120,5 +119,6 @@ Public Class start_test
         'System.Diagnostics.Process.Start("shutdown", "-l")
 
         Call FlushMemory()
+        Timer1.Stop()
     End Sub
 End Class
