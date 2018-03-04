@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MyHelper", "MyHelper\MyHelper.vbproj", "{2641BE26-447D-4022-86A4-0355C716A382}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2641BE26-447D-4022-86A4-0355C716A382}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2641BE26-447D-4022-86A4-0355C716A382}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2641BE26-447D-4022-86A4-0355C716A382}.Debug|x86.ActiveCfg = Debug|x86
+		{2641BE26-447D-4022-86A4-0355C716A382}.Debug|x86.Build.0 = Debug|x86
+		{2641BE26-447D-4022-86A4-0355C716A382}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2641BE26-447D-4022-86A4-0355C716A382}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2641BE26-447D-4022-86A4-0355C716A382}.Release|x86.ActiveCfg = Release|x86
+		{2641BE26-447D-4022-86A4-0355C716A382}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3CE44644-47EA-440F-85B0-A69E3C3DFE19}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://eipq-613-613-applications.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = MyHelper\\MyHelper.vbproj
+		SccProjectName1 = MyHelper
+		SccLocalPath1 = MyHelper
+	EndGlobalSection
+EndGlobal
