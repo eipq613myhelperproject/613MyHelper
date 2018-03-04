@@ -49,6 +49,10 @@ Partial Class settings_hy
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label6
@@ -59,7 +63,7 @@ Partial Class settings_hy
         Me.Label6.ForeColor = System.Drawing.Color.DarkCyan
         Me.Label6.Location = New System.Drawing.Point(5, 415)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(173, 50)
+        Me.Label6.Size = New System.Drawing.Size(163, 50)
         Me.Label6.TabIndex = 78
         Me.Label6.Text = "    Անջատել" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " համակարգիչը" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
@@ -69,7 +73,7 @@ Partial Class settings_hy
         Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button12.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Button12.ForeColor = System.Drawing.Color.Teal
-        Me.Button12.Location = New System.Drawing.Point(464, 449)
+        Me.Button12.Location = New System.Drawing.Point(460, 544)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(282, 64)
         Me.Button12.TabIndex = 77
@@ -84,7 +88,7 @@ Partial Class settings_hy
         Me.Label5.ForeColor = System.Drawing.Color.DarkCyan
         Me.Label5.Location = New System.Drawing.Point(533, 388)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(171, 24)
+        Me.Label5.Size = New System.Drawing.Size(176, 24)
         Me.Label5.TabIndex = 76
         Me.Label5.Text = "(դեղերի համար)"
         '
@@ -96,7 +100,7 @@ Partial Class settings_hy
         Me.Label4.ForeColor = System.Drawing.Color.DarkCyan
         Me.Label4.Location = New System.Drawing.Point(542, 285)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(137, 26)
+        Me.Label4.Size = New System.Drawing.Size(126, 26)
         Me.Label4.TabIndex = 75
         Me.Label4.Text = "Զարթուցիչ"
         '
@@ -142,7 +146,7 @@ Partial Class settings_hy
         Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button11.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Button11.ForeColor = System.Drawing.Color.Teal
-        Me.Button11.Location = New System.Drawing.Point(292, 453)
+        Me.Button11.Location = New System.Drawing.Point(288, 548)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(151, 56)
         Me.Button11.TabIndex = 70
@@ -170,7 +174,7 @@ Partial Class settings_hy
         Me.Label3.ForeColor = System.Drawing.Color.DarkCyan
         Me.Label3.Location = New System.Drawing.Point(476, 89)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(204, 31)
+        Me.Label3.Size = New System.Drawing.Size(199, 31)
         Me.Label3.TabIndex = 67
         Me.Label3.Text = "Ծրագրի լեզուն"
         '
@@ -234,7 +238,7 @@ Partial Class settings_hy
         Me.CheckBox3.ForeColor = System.Drawing.Color.Teal
         Me.CheckBox3.Location = New System.Drawing.Point(9, 383)
         Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(194, 29)
+        Me.CheckBox3.Size = New System.Drawing.Size(182, 29)
         Me.CheckBox3.TabIndex = 62
         Me.CheckBox3.Text = "Ժեստերի լեզու"
         Me.CheckBox3.UseVisualStyleBackColor = False
@@ -247,7 +251,7 @@ Partial Class settings_hy
         Me.CheckBox2.ForeColor = System.Drawing.Color.Teal
         Me.CheckBox2.Location = New System.Drawing.Point(9, 348)
         Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(167, 29)
+        Me.CheckBox2.Size = New System.Drawing.Size(156, 29)
         Me.CheckBox2.TabIndex = 61
         Me.CheckBox2.Text = "Ստեղնաշար"
         Me.CheckBox2.UseVisualStyleBackColor = False
@@ -260,7 +264,7 @@ Partial Class settings_hy
         Me.CheckBox1.ForeColor = System.Drawing.Color.Teal
         Me.CheckBox1.Location = New System.Drawing.Point(9, 313)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(177, 29)
+        Me.CheckBox1.Size = New System.Drawing.Size(164, 29)
         Me.CheckBox1.TabIndex = 60
         Me.CheckBox1.Text = "Խոշորացույց"
         Me.CheckBox1.UseVisualStyleBackColor = False
@@ -324,7 +328,7 @@ Partial Class settings_hy
         Me.Label2.ForeColor = System.Drawing.Color.DarkCyan
         Me.Label2.Location = New System.Drawing.Point(96, 89)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(268, 31)
+        Me.Label2.Size = New System.Drawing.Size(262, 31)
         Me.Label2.TabIndex = 55
         Me.Label2.Text = "Գույնի ընտրություն"
         '
@@ -349,7 +353,7 @@ Partial Class settings_hy
         Me.Label1.ForeColor = System.Drawing.Color.DarkCyan
         Me.Label1.Location = New System.Drawing.Point(210, 8)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(347, 42)
+        Me.Label1.Size = New System.Drawing.Size(344, 42)
         Me.Label1.TabIndex = 53
         Me.Label1.Text = "Կարգավորումներ"
         '
@@ -363,12 +367,58 @@ Partial Class settings_hy
         Me.ComboBox1.Size = New System.Drawing.Size(72, 24)
         Me.ComboBox1.TabIndex = 79
         '
+        'TextBox6
+        '
+        Me.TextBox6.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.TextBox6.Location = New System.Drawing.Point(238, 503)
+        Me.TextBox6.Multiline = True
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(282, 29)
+        Me.TextBox6.TabIndex = 83
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.Teal
+        Me.Label9.Location = New System.Drawing.Point(33, 507)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(199, 20)
+        Me.Label9.TabIndex = 82
+        Me.Label9.Text = "Հեռ. համար + նշանով"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(157, 468)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(282, 29)
+        Me.TextBox1.TabIndex = 81
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.DarkCyan
+        Me.Label7.Location = New System.Drawing.Point(67, 468)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(87, 26)
+        Me.Label7.TabIndex = 80
+        Me.Label7.Text = "Սերվեր"
+        '
         'settings_hy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(754, 521)
+        Me.ClientSize = New System.Drawing.Size(754, 620)
+        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Button12)
@@ -429,4 +479,8 @@ Partial Class settings_hy
     Friend WithEvents Button1 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label7 As Label
 End Class

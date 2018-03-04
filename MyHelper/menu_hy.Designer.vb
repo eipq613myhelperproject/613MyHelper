@@ -25,7 +25,6 @@ Partial Class menu_hy
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button10 = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
@@ -34,6 +33,7 @@ Partial Class menu_hy
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -79,19 +79,6 @@ Partial Class menu_hy
         Me.Button9.TabIndex = 45
         Me.Button9.Text = "Messenger"
         Me.Button9.UseVisualStyleBackColor = False
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.Transparent
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button3.Location = New System.Drawing.Point(322, 523)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(183, 75)
-        Me.Button3.TabIndex = 44
-        Me.Button3.Text = "Օգնականի անկյուն"
-        Me.Button3.UseVisualStyleBackColor = False
         '
         'Button2
         '
@@ -182,18 +169,32 @@ Partial Class menu_hy
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Button5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button5.Location = New System.Drawing.Point(56, 551)
+        Me.Button5.Location = New System.Drawing.Point(27, 551)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(238, 41)
+        Me.Button5.Size = New System.Drawing.Size(267, 41)
         Me.Button5.TabIndex = 57
         Me.Button5.Text = "Կարգավորումներ"
         Me.Button5.UseVisualStyleBackColor = False
+        '
+        'Button6
+        '
+        Me.Button6.BackColor = System.Drawing.Color.Transparent
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.Button6.ForeColor = System.Drawing.Color.Black
+        Me.Button6.Location = New System.Drawing.Point(341, 444)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(240, 73)
+        Me.Button6.TabIndex = 58
+        Me.Button6.Text = "Speech to text"
+        Me.Button6.UseVisualStyleBackColor = False
         '
         'menu_hy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(645, 604)
+        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox3)
@@ -203,7 +204,6 @@ Partial Class menu_hy
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.Button10)
         Me.Controls.Add(Me.Button9)
-        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Name = "menu_hy"
@@ -221,7 +221,6 @@ Partial Class menu_hy
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents Button10 As Button
     Friend WithEvents Button9 As Button
-    Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents PictureBox4 As PictureBox
@@ -229,4 +228,5 @@ Partial Class menu_hy
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Button5 As Button
+    Friend WithEvents Button6 As Button
 End Class

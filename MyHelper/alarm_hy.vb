@@ -1,4 +1,4 @@
-﻿Public Class alarm_ru
+﻿Public Class alarm_hy
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim songs() As String = {"alarm.mp3", "alarm.mp3", "alarm.mp3", "alarm.mp3", "alarm.mp3", "alarm.mp3", "alarm.mp3", "alarm.mp3", "alarm.mp3", "alarm.mp3", "alarm.mp3", "alarm.mp3", "alarm.mp3", "alarm.mp3", "alarm.mp3", "alarm.mp3", "alarm.mp3", "alarm.mp3", "alarm.mp3", "alarm.mp3", "alarm.mp3", "alarm.mp3", "alarm.mp3", "alarm.mp3", "alarm.mp3"}
         For x As Integer = 0 To songs.GetUpperBound(0)

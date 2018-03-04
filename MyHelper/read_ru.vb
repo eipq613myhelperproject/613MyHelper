@@ -60,25 +60,7 @@ Public Class read_ru
         Next
     End Sub   '' Կատարվում է հարցումը և պատասխանի ստացումը
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs)
-        Dim provider As String
-        Dim dataFile As String
-        Dim connString As String
-        Dim myConnection As OleDbConnection = New OleDbConnection
-        Dim dr As OleDbDataReader
-        provider = "Provider=Microsoft.JET.OLEDB.4.0;Data Source ="
-        dataFile = "data/data.mdb"
-        connString = provider & dataFile
-        myConnection.ConnectionString = connString
-        myConnection.Open()
-        Dim str As String
-        str = "SELECT * FROM moderator_data WHERE (name = '" & "tel" & " ')"
-        Dim cmd As OleDbCommand = New OleDbCommand(str, myConnection)
-        dr = cmd.ExecuteReader
-        Dim ezo As String
-        While dr.Read()
-            ezo = dr("value").ToString
-        End While
-        start_test.callto(ezo)
+        start_test.calltomoderator()
     End Sub '' Զանգել օգնողին
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         menu_ru.Show()

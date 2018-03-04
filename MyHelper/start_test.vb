@@ -157,7 +157,6 @@ Public Class start_test
         End While
         callto(ezo)
     End Sub '' Զանգել մոդերատորին
-
     Public Sub askload()
         Dim o As String = ""
         Dim provider As String
@@ -524,8 +523,6 @@ Public Class start_test
             menu_hy.PictureBox4.Visible = True
         End If
     End Sub '' Մենյուի թեմայի կարգավորում / անհրաժեշտ գործիքների ընտրում
-
-
     Function Makequery(ByVal query As String)
         Try
             Dim Request As HttpWebRequest = HttpWebRequest.Create(query)
@@ -601,10 +598,6 @@ Public Class start_test
         Catch ex As Exception
         End Try
     End Function
-
-
-
-
     Public Sub check_first()
         Dim provider As String
         Dim dataFile As String
@@ -626,7 +619,6 @@ Public Class start_test
         cmd = New OleDbCommand(str, myConnection)
         cmd.ExecuteNonQuery()
     End Sub ' Արդյոք առաջին անգամ է ծրագիրը աշխատում այդ քոմփյութերում
-
     Public Sub backgr()
         Dim o As String = ""
         Dim provider As String
@@ -1036,8 +1028,6 @@ Public Class start_test
         settings_uk.Refresh()
         settings_hy.Refresh()
     End Sub ' Թեմայի կարգավորում
-
-
     Public Sub start_load()
         Dim o As String = ""
         Dim provider As String
@@ -1124,8 +1114,6 @@ Public Class start_test
             start_hy.Button1.ForeColor = Color.Lime
         End If
     End Sub  ' Գունային համադրության ընտրում
-
-
 
 
 

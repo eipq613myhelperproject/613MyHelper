@@ -114,6 +114,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="alarm_hy.Designer.vb">
+      <DependentUpon>alarm_hy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="alarm_hy.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ask_en.Designer.vb">
       <DependentUpon>ask_en.vb</DependentUpon>
     </Compile>
@@ -324,6 +330,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="alarm_hy.resx">
+      <DependentUpon>alarm_hy.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ask_en.resx">
       <DependentUpon>ask_en.vb</DependentUpon>
     </EmbeddedResource>

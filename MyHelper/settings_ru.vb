@@ -2,7 +2,6 @@
 Imports System.Data
 Imports System.Data.OleDb
 Public Class settings_ru
-
     Public Sub getdata()
         Dim provider As String
         Dim dataFile As String
@@ -416,17 +415,6 @@ Public Class settings_ru
         Application.Exit()
         Process.Start(Application.ExecutablePath)
     End Sub  '' Թեմայի փոփոխում՝ մուգ շականակագույն և կանաչ
-
-
-
-
-
-
-
-
-
-
-
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
         Call start_test.setanjatel()
         start_ru.Timer1.Start()
