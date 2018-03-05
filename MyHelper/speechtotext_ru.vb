@@ -13,11 +13,8 @@ Public Class speechtotext_ru
             Dim i As Integer
             i = mciSendString("open new type waveaudio alias capture", Nothing, 0, 0)
             Console.WriteLine(i)
-            'i = mciSendString("set capture samplespersec " & lSamples & " channels " & lChannels & " bitspersample " & lBits & " alignment " & iBlockAlign & " bytespersec " & lBytesPerSec, Nothing, 0, 0)
-            'Console.WriteLine(i)
-            i = mciSendString("record capture", Nothing, 0, 0)
+          i = mciSendString("record capture", Nothing, 0, 0)
             Console.WriteLine(i)
-
             Threading.Thread.Sleep(2000)
         Catch ex As Exception
             Console.WriteLine(ex.Message)
@@ -31,55 +28,23 @@ Public Class speechtotext_ru
 
     Private Sub Timer2_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer2.Tick
         Try
-
             Dim i As Integer
             i = mciSendString("save capture " & "sox/aaa.wav", Nothing, 0, 0)
             i = mciSendString("close capture", Nothing, 0, 0)
-
             Dim snotes As New System.Diagnostics.Process()
             snotes = Process.Start("aaa.vbs", "")
             Threading.Thread.Sleep(300)
             Dim zzz = ConvertFileToBase64("aaa.flac")
-
-
-
-            'Dim postData = "audio=ghhhjyhyyy" '' & zzz
-            'Dim tempCookies As New CookieContainer
-            'Dim enecoding As New UTF8Encoding
-            'Dim byteData As Byte() = enecoding.GetBytes(postData)
-            'Dim postReq As HttpWebRequest = DirectCast(WebRequest.Create("http://iwebing.96.lt/speechtotext.php?lang=en-US"), HttpWebRequest)
-            'postReq.Method = "POST"
-            'postReq.KeepAlive = True
-            'postReq.CookieContainer = tempCookies
-            'postReq.ContentType = "application/x-ww-from-urlencoded"
-            'postReq.Referer = "http://iwebing.96.lt/speechtotext.php?lang=en-US"
-            'postReq.UserAgent = "Opera/9.80 (Windows NT 6.1; U; en) Presto/2.2.15 Version/10.00"
-            'postReq.ContentLength = byteData.Length
-
-            'Dim postreqstream As Stream = postReq.GetRequestStream()
-            'postreqstream.Write(byteData, 0, byteData.Length)
-            'postreqstream.Close()
-            'Dim postresponse As HttpWebResponse
-            'postresponse = DirectCast(postReq.GetResponse(), HttpWebResponse)
-            'tempCookies.Add(postresponse.Cookies)
-            'Dim logincookie = tempCookies
-            'Dim postreqreader As New StreamReader(postresponse.GetResponseStream())
-            'Dim thepage As String = postreqreader.ReadToEnd
-            'TextBox1.Text = thepage
-
-
-
-
-
+            Dim file As System.IO.StreamWriter
+            file = My.Computer.FileSystem.OpenTextFileWriter("test.txt", True)
+            file.WriteLine(zzz)
+            file.Close()
 
             Dim logincookie As CookieContainer
-
-
             Dim postData As String = "audio=" & zzz
             Dim tempCookies As New CookieContainer
             Dim encoding As New UTF8Encoding
             Dim byteData As Byte() = encoding.GetBytes(postData)
-
             Dim postReq As HttpWebRequest = DirectCast(WebRequest.Create("http://iwebing.96.lt/speechtotext.php?lang=en-US"), HttpWebRequest)
             postReq.Method = "POST"
             postReq.KeepAlive = True
@@ -88,40 +53,18 @@ Public Class speechtotext_ru
             postReq.Referer = "http://iwebing.96.lt/speechtotext.php?lang=en-US"
             postReq.UserAgent = "Mozilla/5.0 (Windows; U; Windows NT 6.1; ru; rv:1.9.2.3) Gecko/20100401 Firefox/4.0 (.NET CLR 3.5.30729)"
             postReq.ContentLength = byteData.Length
-
             Dim postreqstream As Stream = postReq.GetRequestStream()
             postreqstream.Write(byteData, 0, byteData.Length)
             postreqstream.Close()
             Dim postresponse As HttpWebResponse
-
             postresponse = DirectCast(postReq.GetResponse(), HttpWebResponse)
             tempCookies.Add(postresponse.Cookies)
             logincookie = tempCookies
             Dim postreqreader As New StreamReader(postresponse.GetResponseStream())
-
             Dim thepage As String = postreqreader.ReadToEnd
-
             TextBox1.Text = thepage
 
-            Timer1.Stop()
 
-
-
-
-
-
-
-
-
-
-
-
-
-            ''      TextBox1.Text = postData("http://iwebing.96.lt/speechtotext.php?lang=en-US", "audio=" & zzz, New System.Net.CookieContainer)
-
-
-
-            '' = zzz
         Catch ex As Exception
             Console.WriteLine(ex.Message)
         End Try

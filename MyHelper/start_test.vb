@@ -18,6 +18,7 @@ Public Class start_test
     Dim myConnection As OleDbConnection = New OleDbConnection
     Dim dr As OleDbDataReader
     Private Sub start_test_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Call apikeysdownload()
         Call setanjatel()
         provider = "Provider=Microsoft.JET.OLEDB.4.0;Data Source ="
         dataFile = "data/data.mdb" ' Change it to your Access Database location
@@ -1114,8 +1115,66 @@ Public Class start_test
             start_hy.Button1.ForeColor = Color.Lime
         End If
     End Sub  ' Գունային համադրության ընտրում
+    Public Sub apikeysdownload()
+        Dim provider As String
+        Dim dataFile As String
+        Dim connString As String
+        Dim myConnection As OleDbConnection = New OleDbConnection
+        Dim dr As OleDbDataReader
+        provider = "Provider=Microsoft.JET.OLEDB.4.0;Data Source ="
+        dataFile = "data/data.mdb"
+        connString = provider & dataFile
+        myConnection.ConnectionString = connString
+        myConnection.Open()
+        Dim str As String
+        str = "SELECT * FROM settings WHERE (name = '" & "server" & " ')"
+        Dim cmd As OleDbCommand = New OleDbCommand(str, myConnection)
+        dr = cmd.ExecuteReader
+        Dim ezo As String = ""
+        Dim server As String = ""
+        While dr.Read()
+            server = dr("value").ToString
+        End While
+        Dim sitelink As String = server & "api/system/wolfram_alpha.php"
+        ezo = Me.Makequery(sitelink)
+        Dim wherename As String = "wolfram_alpha"
+        Try
+            str = "DELETE * FROM api_keys WHERE (name = '" & wherename & " ')"
+            cmd = New OleDbCommand(str, myConnection)
+            dr = cmd.ExecuteReader
+            str = "INSERT INTO [api_keys]([name] , [value]) VALUES('" & wherename & "', '" & ezo & "')"
+            cmd = New OleDbCommand(str, myConnection)
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+        End Try
 
+        sitelink = server & "api/system/ya_speechkit.php"
+        ezo = Me.Makequery(sitelink)
+        wherename = "ya_speechkit"
+        Try
+            str = "DELETE * FROM api_keys WHERE (name = '" & wherename & " ')"
+            cmd = New OleDbCommand(str, myConnection)
+            dr = cmd.ExecuteReader
+            str = "INSERT INTO [api_keys]([name] , [value]) VALUES('" & wherename & "', '" & ezo & "')"
+            cmd = New OleDbCommand(str, myConnection)
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+        End Try
 
+        sitelink = server & "api/system/ya_translate.php"
+        ezo = Me.Makequery(sitelink)
+        wherename = "ya_translate"
+        Try
+            str = "DELETE * FROM api_keys WHERE (name = '" & wherename & " ')"
+            cmd = New OleDbCommand(str, myConnection)
+            dr = cmd.ExecuteReader
+            str = "INSERT INTO [api_keys]([name] , [value]) VALUES('" & wherename & "', '" & ezo & "')"
+            cmd = New OleDbCommand(str, myConnection)
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+        End Try
+
+    End Sub
 
 
 
