@@ -158,9 +158,4 @@ Public Class calledit_en
             Label4.ForeColor = Color.Lime
         End If
     End Sub
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        call_en.Show()
-        Me.Close()
-    End Sub
 End Class

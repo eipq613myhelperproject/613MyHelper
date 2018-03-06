@@ -25,7 +25,6 @@ Partial Class menu_en
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button10 = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
@@ -79,19 +78,6 @@ Partial Class menu_en
         Me.Button9.TabIndex = 45
         Me.Button9.Text = "Messenger"
         Me.Button9.UseVisualStyleBackColor = False
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.Transparent
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.Black
-        Me.Button3.Location = New System.Drawing.Point(291, 533)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(207, 75)
-        Me.Button3.TabIndex = 44
-        Me.Button3.Text = "Helper's room"
-        Me.Button3.UseVisualStyleBackColor = False
         '
         'Button2
         '
@@ -203,7 +189,6 @@ Partial Class menu_en
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.Button10)
         Me.Controls.Add(Me.Button9)
-        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Name = "menu_en"
@@ -221,7 +206,6 @@ Partial Class menu_en
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents Button10 As Button
     Friend WithEvents Button9 As Button
-    Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents PictureBox4 As PictureBox

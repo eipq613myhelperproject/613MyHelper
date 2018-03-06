@@ -22,8 +22,13 @@ Partial Class start_en
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer4 = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'Button1
@@ -50,6 +55,22 @@ Partial Class start_en
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "Welcome"
         '
+        'Timer1
+        '
+        Me.Timer1.Interval = 3000
+        '
+        'Timer2
+        '
+        Me.Timer2.Interval = 3000
+        '
+        'Timer3
+        '
+        Me.Timer3.Interval = 3000
+        '
+        'Timer4
+        '
+        Me.Timer4.Interval = 3000
+        '
         'start_en
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -66,4 +87,8 @@ Partial Class start_en
 
     Friend WithEvents Button1 As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents Timer2 As Timer
+    Friend WithEvents Timer3 As Timer
+    Friend WithEvents Timer4 As Timer
 End Class
