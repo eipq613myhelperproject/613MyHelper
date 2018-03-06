@@ -564,14 +564,14 @@ Public Class start_test
             ask_uk.WebBrowser1.Navigate(webAddress)
         End Try
     End Function
-    Function replaceaaa(ByVal textaaa As String)
+    Function replaceaaa(ByRef textaaa As String)
         Dim aaaaaa As String = textaaa
-        For i = 0 To textaaa.Length - 1
+        For i = 1 To textaaa.Length - 1
             aaaaaa = textaaa.Replace(" ", "+")
         Next
-        replaceaaa = aaaaaa
+        Return aaaaaa
     End Function
-    Function getxmltagvalue(ByVal query, ByVal valuetext)
+    Function getxmltagvalue(ByRef query, ByRef valuetext)
         Try
             Dim doc As XmlDocument = New XmlDocument()
             Dim xmlvalue As String
@@ -581,6 +581,8 @@ Public Class start_test
             Dim gettedtext As String = doc.SelectSingleNode(valuetexta).InnerText
             getxmltagvalue = gettedtext
         Catch ex As Exception
+
+
         End Try
     End Function
     Function getxmlattrvalue(ByVal query, ByVal attribute)
@@ -1178,14 +1180,171 @@ Public Class start_test
 
 
 
+    Public Function getserver()
+        Dim provider As String
+        Dim dataFile As String
+        Dim connString As String
+        Dim myConnection As OleDbConnection = New OleDbConnection
+        Dim dr As OleDbDataReader
+        provider = "Provider=Microsoft.JET.OLEDB.4.0;Data Source ="
+        dataFile = "data/data.mdb"
+        connString = provider & dataFile
+        myConnection.ConnectionString = connString
+        myConnection.Open()
+        Dim str As String
+        str = "SELECT * FROM settings WHERE (name = '" & "server" & " ')"
+        Dim cmd As OleDbCommand = New OleDbCommand(str, myConnection)
+        dr = cmd.ExecuteReader
+        Dim server As String = ""
+        While dr.Read()
+            server = dr("value").ToString
+        End While
+        myConnection.Close()
+        Return server
+    End Function
+    Public Function get_translate_key()
+        Dim provider As String
+        Dim dataFile As String
+        Dim connString As String
+        Dim myConnection As OleDbConnection = New OleDbConnection
+        Dim dr As OleDbDataReader
+        provider = "Provider=Microsoft.JET.OLEDB.4.0;Data Source ="
+        dataFile = "data/data.mdb"
+        connString = provider & dataFile
+        myConnection.ConnectionString = connString
+        myConnection.Open()
+        Dim str As String
+        str = "SELECT * FROM api_keys WHERE (name = '" & "ya_translate" & " ')"
+        Dim cmd As OleDbCommand = New OleDbCommand(str, myConnection)
+        dr = cmd.ExecuteReader
+        Dim server As String = ""
+        While dr.Read()
+            server = dr("value").ToString
+        End While
+        myConnection.Close()
+        server = "https://translate.yandex.net/api/v1.5/tr/detect?key=" & server & "&text="
+        Return server
+    End Function
+    Public Function get_speechkit_key()
+        Dim provider As String
+        Dim dataFile As String
+        Dim connString As String
+        Dim myConnection As OleDbConnection = New OleDbConnection
+        Dim dr As OleDbDataReader
+        provider = "Provider=Microsoft.JET.OLEDB.4.0;Data Source ="
+        dataFile = "data/data.mdb"
+        connString = provider & dataFile
+        myConnection.ConnectionString = connString
+        myConnection.Open()
+        Dim str As String
+        str = "SELECT * FROM api_keys WHERE (name = '" & "ya_speechkit" & " ')"
+        Dim cmd As OleDbCommand = New OleDbCommand(str, myConnection)
+        dr = cmd.ExecuteReader
+        Dim server As String = ""
+        While dr.Read()
+            server = dr("value").ToString
+        End While
+        myConnection.Close()
+        server = "https://tts.voicetech.yandex.net/generate?key=" & server & "&emotion=good&text="
+        Return server
+    End Function
+    Public Function getwolframkey()
+        Dim provider As String
+        Dim dataFile As String
+        Dim connString As String
+        Dim myConnection As OleDbConnection = New OleDbConnection
+        Dim dr As OleDbDataReader
+        provider = "Provider=Microsoft.JET.OLEDB.4.0;Data Source ="
+        dataFile = "data/data.mdb"
+        connString = provider & dataFile
+        myConnection.ConnectionString = connString
+        myConnection.Open()
+        Dim str As String
+        str = "SELECT * FROM api_keys WHERE (name = '" & "wolfram_alpha" & " ')"
+        Dim cmd As OleDbCommand = New OleDbCommand(str, myConnection)
+        dr = cmd.ExecuteReader
+        Dim server As String = ""
+        While dr.Read()
+            server = dr("value").ToString
+        End While
+        myConnection.Close()
+        server = "http://api.wolframalpha.com/v1/result?appid=" & server & "&i="
+        Return server
+    End Function
+
+    Public Function gettranslationkey()
+        Dim provider As String
+        Dim dataFile As String
+        Dim connString As String
+        Dim myConnection As OleDbConnection = New OleDbConnection
+        Dim dr As OleDbDataReader
+        provider = "Provider=Microsoft.JET.OLEDB.4.0;Data Source ="
+        dataFile = "data/data.mdb"
+        connString = provider & dataFile
+        myConnection.ConnectionString = connString
+        myConnection.Open()
+        Dim str As String
+        str = "SELECT * FROM api_keys WHERE (name = '" & "ya_translate" & " ')"
+        Dim cmd As OleDbCommand = New OleDbCommand(str, myConnection)
+        dr = cmd.ExecuteReader
+        Dim server As String = ""
+        While dr.Read()
+            server = dr("value").ToString
+        End While
+        myConnection.Close()
+        server = "https://translate.yandex.net/api/v1.5/tr/translate?key=" & server & "&lang=en&text="
 
 
 
 
+        Return server
+    End Function
 
 
+    Public Function trans_key()
+        Dim provider As String
+        Dim dataFile As String
+        Dim connString As String
+        Dim myConnection As OleDbConnection = New OleDbConnection
+        Dim dr As OleDbDataReader
+        provider = "Provider=Microsoft.JET.OLEDB.4.0;Data Source ="
+        dataFile = "data/data.mdb"
+        connString = provider & dataFile
+        myConnection.ConnectionString = connString
+        myConnection.Open()
+        Dim str As String
+        str = "SELECT * FROM api_keys WHERE (name = '" & "ya_translate" & " ')"
+        Dim cmd As OleDbCommand = New OleDbCommand(str, myConnection)
+        dr = cmd.ExecuteReader
+        Dim server As String = ""
+        While dr.Read()
+            server = dr("value").ToString
+        End While
+        Return server
+    End Function
 
 
+    Public Function speech_key()
+        Dim provider As String
+        Dim dataFile As String
+        Dim connString As String
+        Dim myConnection As OleDbConnection = New OleDbConnection
+        Dim dr As OleDbDataReader
+        provider = "Provider=Microsoft.JET.OLEDB.4.0;Data Source ="
+        dataFile = "data/data.mdb"
+        connString = provider & dataFile
+        myConnection.ConnectionString = connString
+        myConnection.Open()
+        Dim str As String
+        str = "SELECT * FROM api_keys WHERE (name = '" & "ya_speechkit" & " ')"
+        Dim cmd As OleDbCommand = New OleDbCommand(str, myConnection)
+        dr = cmd.ExecuteReader
+        Dim server As String = ""
+        While dr.Read()
+            server = dr("value").ToString
+        End While
+        Return server
+    End Function
 
 
 

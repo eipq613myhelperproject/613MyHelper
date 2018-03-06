@@ -66,7 +66,7 @@ Partial Class speechtotext_ru
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.TextBox1)
         Me.Name = "speechtotext_ru"
-        Me.Text = "ru_speechtotext"
+        Me.Text = "MyHelper"
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

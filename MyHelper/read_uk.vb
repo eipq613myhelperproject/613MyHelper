@@ -16,7 +16,7 @@ Public Class read_uk
             textforchecklang = user_text.Substring(20)
         Else : textforchecklang = user_text
         End If
-        textforchecklang = "https://translate.yandex.net/api/v1.5/tr/detect?key=trnsl.1.1.20171215T141314Z.7e2b64cbfaa80409.452ed95d1799a5cc4054fb5ecf82a422669c1a09&text=" & textforchecklang
+        textforchecklang = start_test.get_translate_key() & textforchecklang
         If start_test.getxmlattrvalue(textforchecklang, "code") <> 200 Then
             MsgBox("Error : No internet connection , server disabled. If you think it is wrong, contact to MyHelper's support")
         Else
@@ -34,8 +34,10 @@ Public Class read_uk
                 If language = "uk" Then
                     language = "uk-UK"
                 End If
-                user_text = start_test.Makequery("http://iwebing.96.lt/api/world-it-planet-url-encode.php?a=" & user_text)
-                text_user = "https://tts.voicetech.yandex.net/generate?key=c6a0ef6d-8f9e-4379-9001-408fee63f93c&emotion=good&text=" & user_text & "&lang=" & language 'user_text     479c36c0-5034-48a3-b837-0f57b54e44a6
+                Dim hgfrhfru As String = start_test.getserver() & "api/system/url-encode.php?a="
+
+                user_text = start_test.Makequery(hgfrhfru & user_text)
+                text_user = start_test.get_speechkit_key() & user_text & "&lang=" & language
                 AxWindowsMediaPlayer1.URL = text_user
             End If
         End If

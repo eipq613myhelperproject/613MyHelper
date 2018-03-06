@@ -14,7 +14,7 @@ Public Class ask_ru
         Dim user_text As String
         user_text = TextBox1.Text
         Dim textforchecklang As String
-        textforchecklang = "https://translate.yandex.net/api/v1.5/tr/translate?key=trnsl.1.1.20171215T141314Z.7e2b64cbfaa80409.452ed95d1799a5cc4054fb5ecf82a422669c1a09&lang=en&text=" & user_text
+        textforchecklang = "https://translate.yandex.net/api/v1.5/tr/translate?key=" & start_test.trans_key() & "&lang=en&text=" & user_text
         Dim translatedtext As String = start_test.getxmltagvalue(textforchecklang, "Translation/text")
         Dim translatedtextazaz As String = "http://api.wolframalpha.com/v1/result?appid=H66T43-J89H6RJHLH&i=" & start_test.replaceaaa(translatedtext)
         Dim zzzzzz = start_test.Makequerya(translatedtextazaz, user_text)
@@ -24,10 +24,10 @@ Public Class ask_ru
         If textforchecklangz.Length > 200 Then
             textforchecklangz = textforchecklangz.Substring(20)
         End If
-        textforchecklangz = "https://translate.yandex.net/api/v1.5/tr/detect?key=trnsl.1.1.20171215T141314Z.7e2b64cbfaa80409.452ed95d1799a5cc4054fb5ecf82a422669c1a09&text=" & textforchecklangz
+        textforchecklangz = "https://translate.yandex.net/api/v1.5/tr/detect?key=" & start_test.trans_key() & "&text=" & textforchecklangz
         Dim detectedlang As String = start_test.getxmlattrvalue(textforchecklang, "lang")
         detectedlang = detectedlang.Substring(0, 2)
-        Dim retranslate As String = "https://translate.yandex.net/api/v1.5/tr/translate?key=trnsl.1.1.20171215T141314Z.7e2b64cbfaa80409.452ed95d1799a5cc4054fb5ecf82a422669c1a09&lang=" & detectedlang & "&text=" & zzzzzz
+        Dim retranslate As String = "https://translate.yandex.net/api/v1.5/tr/translate?key=" & start_test.trans_key() & "&lang=" & detectedlang & "&text=" & zzzzzz
         Dim translatedtexts As String = start_test.getxmltagvalue(retranslate, "text")
         TextBox2.Visible = True
         TextBox2.Text = translatedtexts
@@ -36,7 +36,7 @@ Public Class ask_ru
             textforchecklang = user_text.Substring(20)
         Else : textforchecklang = user_text
         End If
-        textforchecklang = "https://translate.yandex.net/api/v1.5/tr/detect?key=trnsl.1.1.20171215T141314Z.7e2b64cbfaa80409.452ed95d1799a5cc4054fb5ecf82a422669c1a09&text=" & textforchecklang
+        textforchecklang = "https://translate.yandex.net/api/v1.5/tr/detect?key=" & start_test.trans_key() & "&text=" & textforchecklang
         If start_test.getxmlattrvalue(textforchecklang, "code") <> 200 Then
             ' MsgBox("Error . There isnt error, some server are disabled . If you think as it is an error , contact to MyHELPER'S SUPPORT")
         Else
@@ -54,8 +54,9 @@ Public Class ask_ru
                 If language = "uk" Then
                     language = "uk-UK"
                 End If
-                user_text = start_test.Makequery("http://iwebing.96.lt/api/world-it-planet-url-encode.php?a=" & user_text)
-                Dim text_user As String = "https://tts.voicetech.yandex.net/generate?key=c6a0ef6d-8f9e-4379-9001-408fee63f93c&emotion=good&text=" & user_text & "&lang=" & language 'user_text
+                Dim hgfrhfru As String = start_test.getserver() & "api/system/url-encode.php?a="
+                user_text = start_test.Makequery(hgfrhfru & user_text)
+                Dim text_user As String = "https://tts.voicetech.yandex.net/generate?key=" & start_test.speech_key() & "&emotion=good&text=" & user_text & "&lang=" & language 'user_text
                 AxWindowsMediaPlayer1.URL = text_user
                 PictureBox1.Visible = True
                 user_text = translatedtexts
