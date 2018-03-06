@@ -7,17 +7,62 @@ Public Class calledit_uk
     Function callto(ByVal calla As String)
         Process.Start("skype:" & calla & "?call")
     End Function
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         call_uk.Show()
         Me.Close()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim provider As String
+        Dim dataFile As String
+        Dim connString As String
+        Dim myConnection As OleDbConnection = New OleDbConnection
+        Dim dr As OleDbDataReader
+        provider = "Provider=Microsoft.JET.OLEDB.4.0;Data Source ="
+        dataFile = "data/data.mdb" ' Change it to your Access Database location
+        connString = provider & dataFile
+        myConnection.ConnectionString = connString
+        myConnection.Open()
+        Dim str As String
+        Dim wherename As String
+        wherename = TextBox1.Text
+
+        Try
+            str = "DELETE * FROM call1 WHERE (name = '" & wherename & " ')"
+            Dim cmd As OleDbCommand = New OleDbCommand(str, myConnection)
+            dr = cmd.ExecuteReader
+        Catch ex As Exception
+            MsgBox("error")
+        End Try
 
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim provider As String
+        Dim dataFile As String
+        Dim connString As String
+        Dim myConnection As OleDbConnection = New OleDbConnection
+        Dim dr As OleDbDataReader
+        provider = "Provider=Microsoft.JET.OLEDB.4.0;Data Source ="
+        dataFile = "data/data.mdb" ' Change it to your Access Database location
+        connString = provider & dataFile
+        myConnection.ConnectionString = connString
+        myConnection.Open()
+        Dim str As String
+        Dim wherename As String
+        wherename = TextBox1.Text
 
+        Try
+
+
+            str = "INSERT INTO [call1]([name] , [login]) VALUES('" & TextBox2.Text & "', '" & TextBox3.Text & "')"
+            Dim cmd As OleDbCommand = New OleDbCommand(str, myConnection)
+            cmd = New OleDbCommand(str, myConnection)
+            cmd.ExecuteNonQuery()
+
+        Catch ex As Exception
+            MsgBox("error")
+        End Try
     End Sub
 
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click

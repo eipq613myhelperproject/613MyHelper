@@ -120,6 +120,12 @@
     <Compile Include="alarm_hy.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="alarm_uk.Designer.vb">
+      <DependentUpon>alarm_uk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="alarm_uk.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ask_en.Designer.vb">
       <DependentUpon>ask_en.vb</DependentUpon>
     </Compile>
@@ -332,6 +338,9 @@
   <ItemGroup>
     <EmbeddedResource Include="alarm_hy.resx">
       <DependentUpon>alarm_hy.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="alarm_uk.resx">
+      <DependentUpon>alarm_uk.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ask_en.resx">
       <DependentUpon>ask_en.vb</DependentUpon>

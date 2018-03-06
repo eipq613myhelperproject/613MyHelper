@@ -37,22 +37,22 @@ Public Class menu_uk
         start_test.callto(ezo)
     End Sub  ' Զանգել մոդերատորին
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        read_ru.Show()
+        read_uk.Show()
         Me.Close()
     End Sub  ' Կարդալ տեքստ
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        ask_ru.Show()
+        ask_uk.Show()
         Me.Close()
     End Sub  ' Հարցնել
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        call_ru.Show()
+        call_uk.Show()
         Me.Close()
     End Sub  ' Զանգել
-    Private Sub menu_ru_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub menu_uk_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub  ' Անհրաժեշտ թեմաների, գործիքների ընտրում
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        settings_ru.Show()
+        settings_uk.Show()
         Me.Hide()
     End Sub   ' Կարգավորումներ
 End Class
